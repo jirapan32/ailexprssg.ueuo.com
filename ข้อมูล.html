@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class=" js no-touch">
+    <head>
+        <boby>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <meta name="keywords" content="[e:loop={'select sitekey from pc_enewspublic',1,24,0}][/e:loop],[!--pagekey--]">
+        <meta name="description" content="[e:loop={'select siteintro from pc_enewspublic',1,24,0}][/e:loop]">
+        <title>ศูนย์ส่วนบุคคล</title>
+        <script type="text/javascript" src="/Public/static/js/Paichen.js"></script>
+<script type="text/javascript" src="/Public/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/Public/static/js/layer.js"></script>
+        <script type="text/javascript" src="/Public/static/js/long.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Public/static/css/main.css">
+        <link rel="stylesheet" href="/Public/static/css/bootstrap.min.css">
+        <script src="/Public/static/js/sweetalert-dev.js"></script>
+        <link href="/Public/static/css/sweetalert.css" rel="stylesheet">
+        <link href="/Public/static/css/css.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/Public/static/css/_zlt.css">
+        <script src="/Public/static/js/jquery.SuperSlide.2.1.1.js"></script>
+        <script src="/Public/static/js/TouchSlide.1.1.js"></script>
+          <script src="/Public/static/js/clipboard.min.js"></script>
+        <style>
+		<body{ background:#fff}
+        .munuCon { margin-bottom:0; }
+		#user_bar{ padding:10px 15px; position:relative; height:70px; float:left; width:100%; margin-bottom:10px; margin-top:10px;}
+		#user_bar i{ float:left; display:block; color:#222;font-style:normal}
+		#user_bar i img{ width:100px; height:auto; margin-right:10px; vertical-align:middle}
+		#user_bar i small{vertical-align:middle; font-size:20px; font-style:normal; font-weight:bold}
+		#user_bar span{ display:block; position:absolute; right:15px; top:22.5px}
+		#user_bar span a{ display:inline-block; margin-left:10px; cursor:pointer}
+		#user_bar span img{ width:25px; height:auto}
+		.user_money{ padding:0 0px; line-height:1.6; color:#fff; font-size:14px;}
+		.user_money_boxy{ background:#fbbe11; background-size:100% auto; padding:15px 15px;-webkit-border-radius: 0px 0px 20px 20px;border-radius: 0px 0px 20px 20px;-moz-border-radius: 0px 0px 20px 20px; float:left; width:100%}
+		.user_money_boxy span{ display:block; float:left; width:50%; padding:0 0px; color:#fff;text-align:center}
+		.user_money_boxy span small{ display:block; font-size:20px; color:#fff}
+		.money_oss{ margin-bottom:15px; float:left; width:100%}
+		.user_money_boxy span.moeny_a{ padding-top:5px;}
+		.moeny_a a{ background:#FFFFFF; font-size:12px; display:inline-block; padding:8px 18px; color:#fbbe11; float:left;-webkit-border-radius:6px;border-radius: 6px;-moz-border-radius: 6px;}
+		.moeny_a a.on{ float:left; margin-left:15px}
+		.user_btn_lio{ background:#f9f9f9; padding-top:15px;}
+		.user_btn_lio li{ background:#fff; padding:0 15px; float:left; width:100%}
+		.user_btn_lio li.first{ padding-top:0px; margin-bottom:0px; padding-bottom:15px; border-bottom:15px solid #f9f9f9}
+		.user_btn_lio li .lab{ display:block; position:relative; padding:15px 0; border-bottom:1px solid #f1f1f1;}
+		.user_btn_lio li .lab i img{ width:20px; height:auto}
+		.user_btn_lio li.first i img{ width:18px; margin-left:2px;}
+		.user_btn_lio li .lab i{ vertical-align:middle;display:inline-block; margin-right:15px;}
+		.user_btn_lio li .lab span{ vertical-align:middle; font-size:16px; color:#222; display:inline-block}
+		.user_btn_lio li .icon{ display:block; padding:15px 0}
+		.user_btn_lio li .icon small{ display:block; float:left; width:25%; text-align:center; padding:0 5px;}
+		.user_btn_lio li .icon small img{ width:26px; height:auto}
+		.user_btn_lio li .icon small font{ display:block; padding-top:4px;}
+		.user_btn_lio li a{ display:block}
+		.user_btn_lio li.lia a{ position:relative}
+		.user_btn_lio li.lia a:after{ background:url(/Public/static/image/fh.png) no-repeat; background-size:100% 100%; width:9px; height:15px; content:""; position:absolute; right:0; top:23px; display:block;}
+		@media screen and (max-width:354px){
+		.moeny_a a.on{ float:right; margin-left:0px}	
+		}
+		.myy-class .layui-layer-title{
+	display: none;
+}
+.myy-class .layui-layer-content{
+	padding: 0;
+}
+.myy-class .layui-layer-content img{
+	width: 100%;
+}
+.myy-class .layui-layer-setwin{
+	display: none;
+}
+.myy-class{
+    border-radius: 5%;
+}
+/*
+.myy-class .layui-layer-btn{
+	padding: 10px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+*/
+.myy-class .layui-layer-btn>a{
+	width: 50%;
+	margin: 0;
+	background: white;
+    border: 0;
+    text-align: center;
+}
+.myy-class.layui-layer-dialog{
+	min-width: 200px;
+}
+.myy-class .layui-layer-btn>a:nth-child(1){
+	color: #999999;
+}
+.myy-class .layui-layer-btn>a:nth-child(2){
+	color: #5e7ffb;
+}
+.user_btn_lio li .lab {
+    display: block;
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 0px solid #f1f1f1;
+}
+        </style>
+        </head>
+
+        <body>
+  <nav class="navbarFix" id="navbarFix" style="height:47px;">
+<div class="section_big bot">
+<ul>
+		<li><a href="/index.php/index/new/index"><img src="/Public/static/picture/nav1-199.png"><p> หน้าหลัก </p></a></li>
+	<!--	<li><a href="/index.php/index/index/team"><img src="/Public/static/picture/nav-199.png" ><p> ทีมของฉัน </p></a></li>-->
+		<li><a href="/index.php/index/robot/robot"><img src="/Public/static/picture/nav3-199.png" ><p> รายได้ของคุณ </p></a></li>
+        <li><a href="/index.php/index/wallet/index"><img src="/Public/static/picture/nav2-199.png"><p> ฉัน </p></a></li>
+        
+        </ul>
+</div>
+</nav>
+     
+    
+    
+    <div class="clear"></div>
+    <div class="user_money">
+    <div class="user_money_boxy">
+	 <div id="user_bar">
+    <i><img src="https://sv1.picz.in.th/images/2021/11/26/6wrGbD.png"><small style='color:#FFFFFF'>ID:</small>
+    </i>
+   
+    </div>
+    <div class="money_oss">
+        <span>ยอดเงินของฉัน(฿)<small></small><small><a href="/index.php/index/wallet/onlinerecharge" style='background: #fff; padding: 10px 20px 10px 20px;  border-radius: 10px;'>เติมเงิน</a> </small></span>
+	<div class="money_ye">
+   
+    <span>รายได้รวม(฿)<small></small><small> <a href="/index.php/index/wallet/withdrawn" style='background: #fff; padding: 10px;  border-radius: 10px;'>ถอน</a> </small></span>
+    <!-- <span class="moeny_a" style='float:right'>
+	  <a href="/index.php/index/wallet/onlinerecharge">เติมเงิน</a>     
+      <a class="on" href="/index.php/index/wallet/withdrawn">ถอน</a>     
+     
+    </span >-->
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    <div class="clear"></div>
+  <!--  <div align="center" style="padding:15px 0"><img src="/Public/static/picture/jg.jpg" height="28"></div>-->
+    <div class="clear"></div>
+    <ul class="user_btn_lio">
+    
+			<li class="lia">
+    <a href="/index.php/wallet/award"><p class="lab"><i><img src="/Public/static/picture/icon_45.png"></i><span>รายละเอียด</span></p></a>
+    </li>
+	<li class="lia">
+    <a href="/index.php/index/wallet/withdrawnlog"><p class="lab"><i><img src="/Public/static/picture/icon_39.png"></i><span>บันทึกการถอน</span></p></a>
+    </li>
+   
+    <li class="lia">
+    <a href="/index.php/index/index/card"><p class="lab"><i><img src="/Public/static/picture/icon_42.png"></i><span>ผูกบัตรธนาคาร</span></p></a>
+    </li>
+    <li class="lia">
+    <a href="/index.php/index/index/index"><p class="lab"><i><img src="/Public/static/picture/icon_2.png"></i><span>เชิญเพื่อน ๆ</span></p></a>
+    </li>
+    <li class="lia">
+    <a href="/index.php/index/index/zhitui"><p class="lab"><i><img src="/Public/static/picture/tdfw.png"></i><span>ทีมของฉัน</span></p></a>
+    </li>
+    <!--<li class="lia">
+    <a href="/index.php/index/index/tgm"><p class="lab"><i><img src="/Public/static/picture/xchb.png"></i><span>โปสเตอร์โปรโมชั่น</span></p></a>
+    </li>-->
+    <li class="lia">
+    <a href="/index.php/index/login/kefu"><p class="lab"><i><img src="/Public/static/picture/kf.png"></i><span>บริการลูกค้า</span></p></a>
+    </li>
+     <li class="lia">
+    <a href="/download/html"><p class="lab"><i><img src="/Public/static/picture/sj.png"></i><span>APP</span></p></a>
+    </li>
+    <!--<li class="lia">
+            <a href="/index.php/Index/New/xiangqing/id/151"><p class="lab"><i><img src="/Public/static/picture/icon_89.png"></i><span>ข้อมูลบริษัท</span></p></a>
+            </li>-->
+    <li class="lia">
+    <a href="/index.php/index/index/logout"><p class="lab"><i><img src="/Public/static/picture/tc.png"></i><span>ออกจากระบบ</span></p></a>
+    <div style="height:40px"></div>
+    </ul> 
+        </div>
+       
+    </body>
+</html>
